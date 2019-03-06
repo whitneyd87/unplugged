@@ -98,7 +98,28 @@ textarea {
    ========================================================================== */
 
 
+/*------------- BASE STYLES -------------*/
 
+.container {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+header nav {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.content-wrapper {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
 
 
 
