@@ -97,39 +97,63 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/*BASE STYLES*/
 
-/*------------- BASE STYLES -------------*/
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, 
+h2,
+h3 {
+  font-family: 'Poppins', sans-serif;
+}
+
+/*GRID*/
 
 .container {
+  border: 1px solid blue;
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 0 auto;
+  width: 90%;
+}
+
+header,
+main,
+footer {
+  border: 1px solid red;
   align-items: center;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
 }
 
-header nav {
+
+
+/*HEADER STYLES*/
+
+header .content-wrapper {
+  border-top: 1px solid green;
   align-items: center;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  width: 70%;
 }
 
-.content-wrapper {
-  align-items: center;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+header figure {
+  margin: 0;
 }
 
 
+/*FOOTER*/
 
-
-
-
-
-
-
-
+.copyright {
+  width: 100%;
+}
 
 
 
