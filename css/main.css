@@ -103,10 +103,21 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+figure {
+  margin: 0;
+}
+
 h1, 
 h2,
 h3 {
   font-family: 'Poppins', sans-serif;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
 }
 
 /*GRID*/
@@ -116,7 +127,7 @@ h3 {
   align-items: center;
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
+  justify-content: flex-start;
   margin: 0 auto;
   width: 90%;
 }
@@ -132,11 +143,14 @@ footer {
 }
 
 
-
 /*HEADER STYLES*/
 
+header .container {
+  justify-content: center;
+}
+
 header .content-wrapper {
-  border-top: 1px solid green;
+  border-top: 3px solid yellow;
   align-items: center;
   display: flex;
   flex-flow: row wrap;
@@ -144,12 +158,23 @@ header .content-wrapper {
   width: 70%;
 }
 
-header figure {
-  margin: 0;
+
+/*MAIN STYLES HOMEPAGE*/
+
+#group-photo {
+  width: 100%;
 }
 
+/*.contact-info .container {
+  justify-content: flex-start;
+}*/
 
-/*FOOTER*/
+/*FOOTER STYLES*/
+
+footer .content-wrapper {
+  text-align: center;
+  width: 56%;
+}
 
 .copyright {
   width: 100%;
@@ -244,8 +269,61 @@ header figure {
    Modify as content requires.
    ========================================================================== */
 
-   @media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+@media only screen and (min-width: 768px) {
+  /*Tablet styles here*/
+
+
+  /*HEADER*/
+
+  header .content-wrapper {
+    width: 100%;
+  }
+
+
+  /*MAIN STYLE HOMEPAGE*/
+
+  .hero-area {
+    width: 100%;
+  }
+
+
+  aside .form-description,
+  aside .form,
+  .social-proof figure, 
+  .general-info,
+  .facilitator {
+    width: 45%;
+  }
+
+  .social-proof article {
+    width: 50%;
+  }
+
+ 
+  header .content-wrapper,
+  aside .container,
+  .social-proof .container,
+  .contact-info .container {
+    justify-content: space-between;
+  }
+
+
+  /*FOOTER*/
+
+  footer .content-wrapper {
+    width: 77%;
+  }
+
+  footer .contact {
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  /*Desktop styles here*/
 }
 
 @media print,
