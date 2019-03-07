@@ -142,34 +142,40 @@ footer {
   justify-content: center;
 }
 
-
-/*HEADER STYLES*/
-
-header .container {
+header .container,
+.features .content-wrapper {
   justify-content: center;
 }
 
-header .content-wrapper {
-  border-top: 3px solid yellow;
+.content-wrapper {
   align-items: center;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+}
+
+/*HEADER*/
+
+
+header .content-wrapper {
+  border-top: 3px solid yellow;
   width: 70%;
 }
 
 
-/*MAIN STYLES HOMEPAGE*/
+/*MAIN*/
+
+
+.features .content-wrapper {
+  text-align: center;
+  width: 60%;
+}
 
 #group-photo {
   width: 100%;
 }
 
-/*.contact-info .container {
-  justify-content: flex-start;
-}*/
-
-/*FOOTER STYLES*/
+/*FOOTER*/
 
 footer .content-wrapper {
   text-align: center;
@@ -280,7 +286,7 @@ footer .content-wrapper {
   }
 
 
-  /*MAIN STYLE HOMEPAGE*/
+  /*MAIN*/
 
   .hero-area {
     width: 100%;
@@ -289,10 +295,20 @@ footer .content-wrapper {
 
   aside .form-description,
   aside .form,
-  .social-proof figure, 
+  .social-proof figure,
+  .mission p, 
   .general-info,
-  .facilitator {
+  .facilitator,
+  .q-and-a {
     width: 45%;
+  }
+
+  .features .content-wrapper {
+    width: 80%;
+  }
+
+  .features-items {
+    width: 50%;
   }
 
   .social-proof article {
@@ -303,7 +319,9 @@ footer .content-wrapper {
   header .content-wrapper,
   aside .container,
   .social-proof .container,
-  .contact-info .container {
+  .mission .container,
+  .contact-info .container,
+  .faq .content-wrapper {
     justify-content: space-between;
   }
 
@@ -311,19 +329,61 @@ footer .content-wrapper {
   /*FOOTER*/
 
   footer .content-wrapper {
+    justify-content: space-around;
     width: 77%;
   }
 
-  footer .contact {
-    align-items: center;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
+  footer .address.
+  footer .social-media {
+    width: 40%;
   }
+
 }
 
 @media only screen and (min-width: 1200px) {
   /*Desktop styles here*/
+
+  .container {
+    width: 80%;
+  }
+
+  .container header {
+    justify-content: flex-start;
+  }
+
+  .call-to-action {
+    width: 100%;
+  }
+
+  aside .container,
+  h1 {
+    width: 70%;
+  }
+
+   .features .content-wrapper {
+    width: 90%;
+  }
+
+  .features-items {
+    width: 30%;
+  }
+
+  .social-proof header {
+    width: 100%;
+  }
+
+  .mission header,
+  .mission header h1,
+  .contact-info header,
+  .contact-info header h1 {
+    width: 100%;
+  }
+
+  .mission header h1,
+  .contact-info header h1 {
+    font-size: 3em;
+  }
+
 }
 
 @media print,
