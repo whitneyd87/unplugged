@@ -97,10 +97,17 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+
 /*BASE STYLES*/
+
+
+html {
+  font-size: 16px;
+}
 
 body {
   font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
 }
 
 figure {
@@ -120,7 +127,21 @@ p {
   margin: 0;
 }
 
+ul li {
+  display: inline;
+  list-style: none;
+}
+
+a {
+  color: #e2e3ed;
+  font-style: normal;
+  text-decoration: none;
+}
+
+
+
 /*GRID*/
+
 
 .container {
   border: 1px solid blue;
@@ -132,7 +153,6 @@ p {
   width: 90%;
 }
 
-header,
 main,
 footer {
   border: 1px solid red;
@@ -147,12 +167,17 @@ header .container,
   justify-content: center;
 }
 
+.hero-area {
+  width: 100%;
+}
+
 .content-wrapper {
   align-items: center;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
 }
+
 
 /*HEADER*/
 
@@ -175,7 +200,9 @@ header .content-wrapper {
   width: 100%;
 }
 
+
 /*FOOTER*/
+
 
 footer .content-wrapper {
   text-align: center;
@@ -287,11 +314,10 @@ footer .content-wrapper {
 
 
   /*MAIN*/
-
-  .hero-area {
-    width: 100%;
+  .hero-area header h1,
+  .features header h2 {
+    width: 70%;
   }
-
 
   aside .form-description,
   aside .form,
@@ -315,7 +341,6 @@ footer .content-wrapper {
     width: 50%;
   }
 
- 
   header .content-wrapper,
   aside .container,
   .social-proof .container,
@@ -350,17 +375,20 @@ footer .content-wrapper {
   .container header {
     justify-content: flex-start;
   }
-
+ 
   .call-to-action {
     width: 100%;
   }
 
-  aside .container,
+  aside .container {
+    justify-content: space-around;
+  }
+  
   h1 {
     width: 70%;
   }
 
-   .features .content-wrapper {
+  .features .content-wrapper {
     width: 90%;
   }
 
