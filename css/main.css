@@ -106,8 +106,11 @@ html {
 }
 
 body {
+  background-color: #202322;
+  color: #e2e3ed;
   font-family: 'Open Sans', sans-serif;
-  font-size: 1rem;
+  font-size: 1em;
+  height: 100%;
 }
 
 figure {
@@ -127,8 +130,45 @@ p {
   margin: 0;
 }
 
+h1 {
+  font-size: 2.25em;
+  padding-top: 50px;
+}
+
+h2 {
+  font-size: 1.875em;
+}
+
+h2 span {
+  display: block;
+}
+
+h3 {
+  font-size: 1.125em;
+}
+
+p {
+  font-size: 0.875em;
+}
+
+header .container {
+  padding-top: 15px;
+}
+
+nav {
+  width: 100%;
+}
+
+ul {
+  display: flex;
+  padding: 0;
+  justify-content: space-around;
+}
+
 ul li {
   display: inline;
+  font-weight: 700;
+  padding: 0 20px;
   list-style: none;
 }
 
@@ -136,6 +176,7 @@ a {
   color: #e2e3ed;
   font-style: normal;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 
@@ -167,9 +208,6 @@ header .container,
   justify-content: center;
 }
 
-.hero-area {
-  width: 100%;
-}
 
 .content-wrapper {
   align-items: center;
@@ -190,10 +228,82 @@ header .content-wrapper {
 
 /*MAIN*/
 
+.hero-area {
+  background-image: url('../img/hero-image.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+  width: 100%;
+}
+
+.call-to-action {
+  background-color: #527158;
+  padding: 25px 0 55px 0;
+}
+
+aside .form {
+  margin-top: 30px;
+}
+
+.form-description h3 {
+  padding-bottom: 10px;
+}
+
+.form h3 {
+  padding-bottom: 15px;
+}
+ 
+input[type=email] {
+  border: none;
+  box-sizing: border-box;
+  color: #2a423a;
+  font-style: italic;
+  padding: 20px 0;
+  width: 100%;
+}
+ 
+input[type=button] {
+  background-color: #2a423a;
+  border: none;
+  color: #e2e3ed;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1.125em;
+  padding: 20px 0;
+  margin-top: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.features {
+  background-image: url('../img/camping.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 810px;
+  padding: 50px 0 65px 0;
+}
 
 .features .content-wrapper {
   text-align: center;
   width: 60%;
+}
+
+.features h2 {
+  padding-bottom: 65px;
+}
+
+.social-proof {
+  background-color: #2a423a;
+  padding: 50px 0 45px 0;
+}
+
+.social-proof h2 {
+  padding-bottom: 25px;
+}
+
+.social-proof h3 {
+  padding: 20px 0;
 }
 
 #group-photo {
@@ -203,10 +313,22 @@ header .content-wrapper {
 
 /*FOOTER*/
 
+footer {
+  padding-top: 30px;
+}
 
 footer .content-wrapper {
   text-align: center;
   width: 56%;
+}
+
+footer .address,
+footer .social-media {
+  padding: 20px 0;
+}
+
+footer h3 {
+  padding-bottom: 20px;
 }
 
 .copyright {
@@ -305,6 +427,21 @@ footer .content-wrapper {
 @media only screen and (min-width: 768px) {
   /*Tablet styles here*/
 
+  .container {
+    width: 80%;
+  }
+
+  h1 {
+    font-size: 3em;
+  }
+
+  h2 {
+    font-size: 2.25em;
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
 
   /*HEADER*/
 
@@ -312,15 +449,28 @@ footer .content-wrapper {
     width: 100%;
   }
 
-
-  /*MAIN*/
-  .hero-area header h1,
-  .features header h2 {
-    width: 70%;
+  nav {
+    width: 50%;
   }
 
-  aside .form-description,
+  nav ul {
+    justify-content: flex-end;
+  }
+
+
+  /*MAIN*/
+
+  .hero-area {
+    height: 600px;
+  }
+
+  .hero-area header h1
+  .features header h2 {
+    width: 100%;
+  }
+
   aside .form,
+  aside .form-description,
   .social-proof figure,
   .mission p, 
   .general-info,
@@ -329,8 +479,21 @@ footer .content-wrapper {
     width: 45%;
   }
 
+  .form {
+    padding-bottom: 5px;
+  }
+
+  input[type=email],
+  input[type=button] {
+    padding: 10px 0;
+  }
+
   .features .content-wrapper {
     width: 80%;
+  }
+
+  .features h2 span{
+    display: inline;
   }
 
   .features-items {
@@ -338,6 +501,7 @@ footer .content-wrapper {
   }
 
   .social-proof article {
+    padding-bottom: 25px;
     width: 50%;
   }
 
@@ -368,8 +532,16 @@ footer .content-wrapper {
 @media only screen and (min-width: 1200px) {
   /*Desktop styles here*/
 
-  .container {
-    width: 80%;
+  h1 {
+    font-size: 3.75em;
+  }
+
+  h2 {
+    font-size: 2.25em;
+  }
+
+  h3 {
+    font-size: 1.875em;
   }
 
   .container header {
@@ -383,7 +555,12 @@ footer .content-wrapper {
   aside .container {
     justify-content: space-around;
   }
-  
+
+  aside .form-description,
+  aside .form {
+    width: 33%;
+  }
+
   h1 {
     width: 70%;
   }
