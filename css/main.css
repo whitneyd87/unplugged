@@ -114,7 +114,14 @@ body {
 }
 
 figure {
+  align-items: center;
+  display: flex;
+  justify-content: center;
   margin: 0;
+}
+
+img {
+  width: 100%;
 }
 
 h1, 
@@ -231,6 +238,7 @@ header .content-wrapper {
 .hero-area {
   background-image: url('../img/hero-image.jpg');
   background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
   height: 500px;
   width: 100%;
@@ -304,10 +312,6 @@ input[type=button] {
 
 .social-proof h3 {
   padding: 20px 0;
-}
-
-#group-photo {
-  width: 100%;
 }
 
 
@@ -472,6 +476,7 @@ footer h3 {
   aside .form,
   aside .form-description,
   .social-proof figure,
+  .social-proof article,
   .mission p, 
   .general-info,
   .facilitator,
@@ -502,7 +507,6 @@ footer h3 {
 
   .social-proof article {
     padding-bottom: 25px;
-    width: 50%;
   }
 
   header .content-wrapper,
