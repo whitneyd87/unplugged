@@ -98,7 +98,7 @@ textarea {
    ========================================================================== */
 
 
-/*BASE STYLES*/
+/*----- BASE STYLES -----*/
 
 
 html {
@@ -128,6 +128,7 @@ h1,
 h2,
 h3 {
   font-family: 'Poppins', sans-serif;
+  font-weight: 500;
 }
 
 h1,
@@ -139,7 +140,6 @@ p {
 
 h1 {
   font-size: 2.25em;
-  padding-top: 50px;
 }
 
 h2 {
@@ -158,11 +158,8 @@ p {
   font-size: 0.875em;
 }
 
-header .container {
-  padding-top: 15px;
-}
-
 nav {
+  font-size: 1.125em;
   width: 100%;
 }
 
@@ -170,25 +167,27 @@ ul {
   display: flex;
   padding: 0;
   justify-content: space-around;
+  width: 100%;
 }
 
 ul li {
   display: inline;
-  font-weight: 700;
-  padding: 0 20px;
+  font-weight: bold;
   list-style: none;
+}
+
+nav ul li a {
+  text-transform: uppercase;
 }
 
 a {
   color: #e2e3ed;
   font-style: normal;
   text-decoration: none;
-  text-transform: uppercase;
 }
 
 
-
-/*GRID*/
+/*----- GRID -----*/
 
 
 .container {
@@ -215,7 +214,6 @@ header .container,
   justify-content: center;
 }
 
-
 .content-wrapper {
   align-items: center;
   display: flex;
@@ -224,8 +222,12 @@ header .container,
 }
 
 
-/*HEADER*/
+/*----- HEADER -----*/
 
+
+header .container {
+  padding-top: 15px;
+}
 
 header .content-wrapper {
   border-top: 3px solid yellow;
@@ -233,7 +235,8 @@ header .content-wrapper {
 }
 
 
-/*MAIN*/
+/*----- MAIN HOME -----*/
+
 
 .hero-area {
   background-image: url('../img/hero-image.jpg');
@@ -244,21 +247,25 @@ header .content-wrapper {
   width: 100%;
 }
 
+.hero-area .container {
+  padding-top: 50px;
+}
+
 .call-to-action {
   background-color: #527158;
-  padding: 25px 0 55px 0;
 }
 
-aside .form {
-  margin-top: 30px;
+.call-to-action aside .container {
+  padding: 25px 0 50px 0;
 }
 
-.form-description h3 {
-  padding-bottom: 10px;
-}
-
+.form-description h3,
 .form h3 {
   padding-bottom: 15px;
+}
+
+.form-description p {
+  padding-bottom: 35px;
 }
  
 input[type=email] {
@@ -288,58 +295,150 @@ input[type=button] {
   background-image: url('../img/camping.jpg');
   background-position: center;
   background-size: cover;
-  height: 810px;
-  padding: 50px 0 65px 0;
+  height: auto;
+}
+
+.features .container {
+  padding: 50px 0 25px 0;
+}
+
+.features .container header {
+  padding-bottom: 65px;
 }
 
 .features .content-wrapper {
+  margin: auto;
   text-align: center;
   width: 60%;
 }
 
-.features h2 {
-  padding-bottom: 65px;
+.features-items {
+  align-items: flex-start;
+  display: flex;
+  flex-flow: row wrap;
+  height: 160px;
+  justify-content: center;
+}
+
+.features-icon {
+  height: 25%;
+  width: 25%;
+}
+
+.features-description {
+  height: 40%
+}
+
+#utensils {
+  width: 80%;
 }
 
 .social-proof {
+  align-items: center;
   background-color: #2a423a;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.social-proof .container {
   padding: 50px 0 45px 0;
 }
 
-.social-proof h2 {
-  padding-bottom: 25px;
+.social-proof header {
+  padding-bottom: 30px;
 }
 
-.social-proof h3 {
+.social-proof article {
+  height: 100%;
+}
+
+.social-proof article h3 {
   padding: 20px 0;
 }
 
 
-/*FOOTER*/
+/*----- MAIN ABOUT -----*/
+
+
+.mission {
+  background-color: #527158;
+}
+
+.mission .container {
+  padding: 50px 0;
+}
+
+.mission .container h2 {
+  width: 95%;
+}
+
+.mission .container p {
+  padding-top: 15px;
+}
+
+.map {
+  width: 100%;
+}
+
+.contact-info {
+  background-color: #2a423a;
+  padding: 50px 0;
+}
+
+.contact-info h3 {
+  padding: 15px 0;
+}
+
+
+/*----- MAIN FAQ -----*/
+
+.faq {
+  background-color: #527158;
+  padding: 50px 0;
+}
+
+.faq .content-wrapper {
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.q-and-a {
+  padding-top: 45px;
+}
+
+.q-and-a h3 {
+  padding-bottom: 10px; 
+}
+
+
+/*----- FOOTER ------*/
+
 
 footer {
-  padding-top: 30px;
-}
-
-footer .content-wrapper {
+  padding-top: 50px;
   text-align: center;
-  width: 56%;
 }
 
-footer .address,
-footer .social-media {
-  padding: 20px 0;
+.address,
+.social-media { 
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  text-align: center;
+  padding-bottom: 50px;
 }
 
-footer h3 {
-  padding-bottom: 20px;
+.address h3,
+.social-media h3 {
+  padding-bottom: 15px;
+  width: 100%;
 }
 
 .copyright {
   width: 100%;
 }
-
-
 
  /* ==========================================================================
    Helper classes
@@ -431,9 +530,43 @@ footer h3 {
 @media only screen and (min-width: 768px) {
   /*Tablet styles here*/
 
-  .container {
+
+  /*----- GRID -----*/
+
+
+  .container,
+  .features .content-wrapper {
     width: 80%;
   }
+
+  nav,
+  .features-items,
+  .social-proof figure {
+    width: 50%;
+  }
+
+  header figure {
+    width: 35%;
+  }
+
+  aside .form,
+  aside .form-description,
+  .social-proof article,
+  .mission p, 
+  .general-info,
+  .facilitator,
+  .q-and-a {
+    width: 45%;
+  }
+
+  footer .address,
+  footer .social-media {
+    width: 40%;
+  }
+
+
+  /*----- FONT STYLES -----*/
+
 
   h1 {
     font-size: 3em;
@@ -447,66 +580,12 @@ footer h3 {
     font-size: 1.5em;
   }
 
-  /*HEADER*/
-
-  header .content-wrapper {
-    width: 100%;
-  }
-
-  nav {
-    width: 50%;
+  p {
+    font-size: 0.875em;
   }
 
   nav ul {
     justify-content: flex-end;
-  }
-
-
-  /*MAIN*/
-
-  .hero-area {
-    height: 600px;
-  }
-
-  .hero-area header h1
-  .features header h2 {
-    width: 100%;
-  }
-
-  aside .form,
-  aside .form-description,
-  .social-proof figure,
-  .social-proof article,
-  .mission p, 
-  .general-info,
-  .facilitator,
-  .q-and-a {
-    width: 45%;
-  }
-
-  .form {
-    padding-bottom: 5px;
-  }
-
-  input[type=email],
-  input[type=button] {
-    padding: 10px 0;
-  }
-
-  .features .content-wrapper {
-    width: 80%;
-  }
-
-  .features h2 span{
-    display: inline;
-  }
-
-  .features-items {
-    width: 50%;
-  }
-
-  .social-proof article {
-    padding-bottom: 25px;
   }
 
   header .content-wrapper,
@@ -518,18 +597,80 @@ footer h3 {
     justify-content: space-between;
   }
 
+  .mission .container,
+  .contact-info .container {
+    align-items: flex-start;
+  }
 
-  /*FOOTER*/
+  nav ul li {
+    padding-left: 40px;
+  }
+  
+  .hero-area {
+    height: 600px;
+  }
+
+  .call-to-action aside .container {
+    align-items: flex-start;
+    padding: 50px 0;
+  }
+
+  .call-to-action aside p {
+    padding: 0;
+  }
+
+  input[type=email],
+  input[type=button] {
+    padding: 10px 0;
+  }
+
+  .features .container {
+    padding: 90px 0;
+  }
+
+  .features .container header {
+    padding-bottom: 35px;
+  }
+
+  .features h2 span{
+    display: inline;
+  }
+
+  .features-description {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .social-proof .content-wrapper {
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .social-proof article h3 {
+    padding-top: 0;
+  }
+
+  .q-and-a {
+    padding-top: 40px;
+  }
+
+  .q-and-a h3 {
+    font-size: 0.875em;
+    font-weight: medium;
+  }
+
+  .q-and-a p {
+    padding-top: 20px;
+  }
+
 
   footer .content-wrapper {
+    align-items: flex-start;
     justify-content: space-around;
-    width: 77%;
+    width: 78%;
   }
 
-  footer .address.
-  footer .social-media {
-    width: 40%;
-  }
 
 }
 
@@ -538,6 +679,7 @@ footer h3 {
 
   h1 {
     font-size: 3.75em;
+    width: 70%;
   }
 
   h2 {
@@ -546,6 +688,10 @@ footer h3 {
 
   h3 {
     font-size: 1.875em;
+  }
+
+  p {
+    font-size: 1.125em;
   }
 
   .container header {
@@ -565,20 +711,36 @@ footer h3 {
     width: 33%;
   }
 
-  h1 {
-    width: 70%;
+  aside .form {
+    padding-bottom: 50px;
+  }
+
+  .features .container {
+    padding: 100px 0 65px 0;
   }
 
   .features .content-wrapper {
+    justify-content: space-between;
     width: 90%;
   }
 
   .features-items {
+    height: 100%;
+    margin: 30px 0;
     width: 30%;
   }
 
+  .features-items .features-icon {
+    padding-bottom: 25px;
+  }
+
   .social-proof header {
+    padding-bottom: 70px;
     width: 100%;
+  }
+
+  .social-proof article {
+    padding-bottom: 75px;
   }
 
   .mission header,
@@ -591,6 +753,10 @@ footer h3 {
   .mission header h1,
   .contact-info header h1 {
     font-size: 3em;
+  }
+
+  footer .content-wrapper {
+    justify-content: space-between;
   }
 
 }
