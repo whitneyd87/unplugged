@@ -298,15 +298,12 @@ input[type=button] {
 }
 
 .features .container {
-  padding: 50px 0 25px 0;
-}
-
-.features .container header {
-  padding-bottom: 65px;
+  padding: 50px 0 15px 0;
 }
 
 .features .content-wrapper {
   margin: auto;
+  padding-top: 65px;
   text-align: center;
   width: 60%;
 }
@@ -315,21 +312,17 @@ input[type=button] {
   align-items: flex-start;
   display: flex;
   flex-flow: row wrap;
-  height: 150px;
   justify-content: center;
+  margin-bottom: 50px;
 }
 
 .features-icon {
-  height: 25%;
-  width: 25%;
+  font-size: 3.75em;
+  margin-bottom: 40px;
 }
 
 .features-description {
   height: 40%
-}
-
-#utensils {
-  width: 80%;
 }
 
 .social-proof {
@@ -394,7 +387,6 @@ input[type=button] {
   position: absolute;
   top: 0;
 }
-
 
 .contact-info {
   background-color: #2a423a;
@@ -661,17 +653,25 @@ footer .content-wrapper {
     padding: 10px 0;
   }
 
-  .features .container header {
-    padding-bottom: 35px;
-  }
-
   .features h2 span{
     display: inline;
   }
 
+  .features .container {
+    padding: 95px 0 45px 0;
+  }
+
+  .features .content-wrapper {
+    padding-top: 35px;
+  }
+
+  .features-icon {
+    margin-bottom: 30px;
+  }
+
   .features-description {
     margin: 0 auto;
-    width: 90%;
+    padding: 0 40px;
   }
 
   .social-proof .content-wrapper {
@@ -685,7 +685,6 @@ footer .content-wrapper {
   }
 
   .social-proof .container,
-  .features .container,
   .mission .container,
   .contact-info .container,
   .faq .container {
@@ -744,19 +743,27 @@ footer .content-wrapper {
     width: 33%;
   }
 
+  .features .container {
+    padding: 100px 0 35px 0;
+  }
+
   .features .content-wrapper {
     justify-content: space-between;
+    padding-top: 100px;
     width: 90%;
   }
 
   .features-items {
-    height: 100%;
-    margin: 30px 0;
-    width: 30%;
+    margin-bottom: 60px;
+    width: 33%;
   }
 
-  .features-items .features-icon {
-    padding-bottom: 25px;
+  .features-icon {
+    margin-bottom: 25px;
+  }
+
+  .features-description {
+    padding: 0 50px;
   }
 
   .social-proof header {
