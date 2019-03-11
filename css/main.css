@@ -183,6 +183,7 @@ nav ul li a {
 a {
   color: #e2e3ed;
   font-style: normal;
+  font-weight: 500;
   text-decoration: none;
 }
 
@@ -253,9 +254,10 @@ header .content-wrapper {
 
 .call-to-action {
   background-color: #527158;
+  width: 100%;
 }
 
-.call-to-action aside .container {
+.call-to-action .container {
   padding: 25px 0 50px 0;
 }
 
@@ -316,7 +318,7 @@ input[type=button] {
   align-items: flex-start;
   display: flex;
   flex-flow: row wrap;
-  height: 160px;
+  height: 150px;
   justify-content: center;
 }
 
@@ -365,7 +367,8 @@ input[type=button] {
   background-color: #527158;
 }
 
-.mission .container {
+.mission .container,
+.contact-info .container {
   padding: 50px 0;
 }
 
@@ -377,13 +380,18 @@ input[type=button] {
   padding-top: 15px;
 }
 
-.map {
+.map,
+.copyright {
   width: 100%;
+}
+
+.map figure {
+  height: 450px;
 }
 
 .contact-info {
   background-color: #2a423a;
-  padding: 50px 0;
+  width: 100%;
 }
 
 .contact-info h3 {
@@ -395,6 +403,9 @@ input[type=button] {
 
 .faq {
   background-color: #527158;
+}
+
+.faq .container {
   padding: 50px 0;
 }
 
@@ -415,7 +426,7 @@ input[type=button] {
 /*----- FOOTER ------*/
 
 
-footer {
+footer .content-wrapper {
   padding-top: 50px;
   text-align: center;
 }
@@ -436,9 +447,7 @@ footer {
   width: 100%;
 }
 
-.copyright {
-  width: 100%;
-}
+
 
  /* ==========================================================================
    Helper classes
@@ -534,9 +543,8 @@ footer {
   /*----- GRID -----*/
 
 
-  .container,
-  .features .content-wrapper {
-    width: 80%;
+  .container {
+    width: 83%;
   }
 
   nav,
@@ -545,18 +553,30 @@ footer {
     width: 50%;
   }
 
-  header figure {
-    width: 35%;
+  header .content-wrapper {
+    width: 100%;
   }
 
-  aside .form,
-  aside .form-description,
+  header figure {
+    width: 30%;
+  }
+
+  .call-to-action .form,
+  .call-to-action .form-description,
   .social-proof article,
   .mission p, 
   .general-info,
   .facilitator,
   .q-and-a {
     width: 45%;
+  }
+
+  .features .content-wrapper {
+    width: 78%;
+  }
+
+  .social-proof header {
+    width: 80%;
   }
 
   footer .address,
@@ -580,6 +600,10 @@ footer {
     font-size: 1.5em;
   }
 
+  .q-and-a h3 {
+    font-size: 0.875em;
+  }
+
   p {
     font-size: 0.875em;
   }
@@ -589,7 +613,7 @@ footer {
   }
 
   header .content-wrapper,
-  aside .container,
+  .call-to-action .container,
   .social-proof .container,
   .mission .container,
   .contact-info .container,
@@ -610,22 +634,18 @@ footer {
     height: 600px;
   }
 
-  .call-to-action aside .container {
+  .call-to-action .container {
     align-items: flex-start;
     padding: 50px 0;
   }
 
-  .call-to-action aside p {
+  .call-to-action p {
     padding: 0;
   }
 
   input[type=email],
   input[type=button] {
     padding: 10px 0;
-  }
-
-  .features .container {
-    padding: 90px 0;
   }
 
   .features .container header {
@@ -651,31 +671,38 @@ footer {
     padding-top: 0;
   }
 
-  .q-and-a {
-    padding-top: 40px;
+  .map figure {
+    height: 550px;
   }
 
-  .q-and-a h3 {
-    font-size: 0.875em;
-    font-weight: medium;
+  .social-proof .container,
+  .features .container,
+  .mission .container,
+  .contact-info .container,
+  .faq .container {
+    padding: 100px 0;
+  }
+
+  .q-and-a {
+    padding-top: 40px;
   }
 
   .q-and-a p {
     padding-top: 20px;
   }
 
-
   footer .content-wrapper {
     align-items: flex-start;
     justify-content: space-around;
+    padding-top: 100px;
     width: 78%;
   }
-
 
 }
 
 @media only screen and (min-width: 1200px) {
   /*Desktop styles here*/
+
 
   h1 {
     font-size: 3.75em;
@@ -697,26 +724,15 @@ footer {
   .container header {
     justify-content: flex-start;
   }
- 
-  .call-to-action {
-    width: 100%;
-  }
 
-  aside .container {
+  .call-to-action .container {
     justify-content: space-around;
   }
 
-  aside .form-description,
-  aside .form {
+  .call-to-action .form-description,
+  .call-to-action .form {
+    align-items: flex-start;
     width: 33%;
-  }
-
-  aside .form {
-    padding-bottom: 50px;
-  }
-
-  .features .container {
-    padding: 100px 0 65px 0;
   }
 
   .features .content-wrapper {
@@ -740,7 +756,7 @@ footer {
   }
 
   .social-proof article {
-    padding-bottom: 75px;
+    padding: 0;
   }
 
   .mission header,
@@ -753,6 +769,10 @@ footer {
   .mission header h1,
   .contact-info header h1 {
     font-size: 3em;
+  }
+
+  .q-and-a h3 {
+    font-size: 1.125em;
   }
 
   footer .content-wrapper {
