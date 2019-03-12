@@ -155,15 +155,24 @@ p {
   font-size: 0.875em;
 }
 
+hr {
+	border-top: 0.5px solid #3a3a3a;
+	margin: 0;
+	position: absolute;
+	width: 100vw;
+}
+
 nav {
   font-size: 1.125em;
+  margin: 0;
   width: 100%;
 }
 
 ul {
   display: flex;
-  padding: 0;
   justify-content: space-around;
+  padding: 20px 0 0 0;
+  margin: 10px 0 20px 0;
   width: 100%;
 }
 
@@ -194,6 +203,7 @@ a {
   flex-flow: row wrap;
   justify-content: flex-start;
   margin: 0 auto;
+  position: relative;
   width: 90%;
 }
 
@@ -215,6 +225,7 @@ header .container,
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  position: relative;
 }
 
 
@@ -560,6 +571,10 @@ footer .content-wrapper {
     width: 83%;
   }
 
+  hr {
+  	width: 0;
+  }
+
   nav,
   .features-items,
   .social-proof figure {
@@ -593,7 +608,7 @@ footer .content-wrapper {
   }
 
   .map figure {
-    padding-bottom: 50%
+    padding-bottom: 45%
   }
 
   footer .address,
