@@ -121,13 +121,6 @@ img {
   width: 100%;
 }
 
-h1, 
-h2,
-h3 {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
-}
-
 h1,
 h2,
 h3,
@@ -135,16 +128,16 @@ p {
   margin: 0;
 }
 
+
+/*----- FONT STYLES -----*/
+
+
 h1 {
   font-size: 2.25em;
 }
 
 h2 {
   font-size: 1.875em;
-}
-
-h2 span {
-  display: block;
 }
 
 h3 {
@@ -155,24 +148,16 @@ p {
   font-size: 0.875em;
 }
 
-hr {
-	border-top: 0.5px solid #3a3a3a;
-	margin: 0;
-	position: absolute;
-	width: 100vw;
+h1, 
+h2,
+h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
 }
 
 nav {
   font-size: 1.125em;
   margin: 0;
-  width: 100%;
-}
-
-ul {
-  display: flex;
-  justify-content: space-around;
-  padding: 20px 0 0 0;
-  margin: 10px 0 20px 0;
   width: 100%;
 }
 
@@ -228,6 +213,14 @@ header .container,
   position: relative;
 }
 
+ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0 0 0;
+  margin: 10px 0 20px 0;
+  width: 100%;
+}
+
 
 /*----- HEADER -----*/
 
@@ -238,6 +231,13 @@ header .container {
 
 header .content-wrapper {
   width: 70%;
+}
+
+hr {
+	border-top: 0.5px solid #3a3a3a;
+	margin: 0;
+	position: absolute;
+	width: 100vw;
 }
 
 
@@ -275,7 +275,7 @@ header .content-wrapper {
   padding-bottom: 35px;
 }
  
-input[type=email] {
+.form input[type=email] {
   border: none;
   box-sizing: border-box;
   color: #2a423a;
@@ -284,7 +284,7 @@ input[type=email] {
   width: 100%;
 }
  
-input[type=button] {
+.form input[type=button] {
   background-color: #2a423a;
   border: none;
   color: #e2e3ed;
@@ -307,6 +307,11 @@ input[type=button] {
 
 .features .container {
   padding: 50px 0 15px 0;
+}
+
+
+.features h2 span {
+  display: block;
 }
 
 .features .content-wrapper {
@@ -407,6 +412,7 @@ input[type=button] {
 
 
 /*----- MAIN FAQ -----*/
+
 
 .faq {
   background-color: #527158;
@@ -571,10 +577,6 @@ footer .content-wrapper {
     width: 83%;
   }
 
-  hr {
-  	width: 0;
-  }
-
   nav,
   .features-items,
   .social-proof figure {
@@ -589,6 +591,32 @@ footer .content-wrapper {
     width: 30%;
   }
 
+  hr {
+  	width: 0;
+  }
+
+  nav ul {
+    justify-content: flex-end;
+  }
+
+  nav ul li {
+    padding-left: 40px;
+  }
+
+   header .content-wrapper,
+  .call-to-action .container,
+  .social-proof .container,
+  .mission .container,
+  .contact-info .container,
+  .faq .content-wrapper {
+    justify-content: space-between;
+  }
+
+  .mission .container,
+  .contact-info .container {
+    align-items: flex-start;
+  }
+
   .call-to-action .form,
   .call-to-action .form-description,
   .social-proof article,
@@ -599,21 +627,94 @@ footer .content-wrapper {
     width: 45%;
   }
 
+  .social-proof .container,
+  .mission .container,
+  .contact-info .container,
+  .faq .container {
+    padding: 100px 0;
+  }
+
+  .hero-area {
+    height: 600px;
+  }
+
+  .call-to-action .container {
+    align-items: flex-start;
+    padding: 50px 0;
+  }
+
+  .call-to-action p {
+    padding: 0;
+  }
+
+  .form input[type=email],
+  .form input[type=button] {
+    padding: 10px 0;
+  }
+
+  .features .container {
+    padding: 95px 0 45px 0;
+  }
+
+  .features h2 span{
+    display: inline;
+  }
+
   .features .content-wrapper {
+    padding-top: 35px;
     width: 78%;
+  }
+
+  .features-icon {
+    margin-bottom: 30px;
+  }
+
+  .features-description {
+    margin: 0 auto;
+    padding: 0 40px;
   }
 
   .social-proof header {
     width: 80%;
   }
 
+  .social-proof .content-wrapper {
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .social-proof article h3 {
+    padding-top: 0;
+  }
+
   .map figure {
     padding-bottom: 45%
+  }
+
+  .q-and-a {
+    padding-top: 40px;
+  }
+
+  .q-and-a p {
+    padding-top: 20px;
+  }
+
+  footer .content-wrapper {
+    align-items: flex-start;
+    justify-content: space-around;
+    padding-top: 100px;
+    width: 78%;
   }
 
   footer .address,
   footer .social-media {
     width: 40%;
+  }
+
+  .address h3,
+  .social-media h3 {
+  	padding-bottom: 35px;
   }
 
 
@@ -640,126 +741,12 @@ footer .content-wrapper {
     font-size: 0.875em;
   }
 
-  nav ul {
-    justify-content: flex-end;
-  }
-
-  header .content-wrapper,
-  .call-to-action .container,
-  .social-proof .container,
-  .mission .container,
-  .contact-info .container,
-  .faq .content-wrapper {
-    justify-content: space-between;
-  }
-
-  .mission .container,
-  .contact-info .container {
-    align-items: flex-start;
-  }
-
-  nav ul li {
-    padding-left: 40px;
-  }
-  
-  .hero-area {
-    height: 600px;
-  }
-
-  .call-to-action .container {
-    align-items: flex-start;
-    padding: 50px 0;
-  }
-
-  .call-to-action p {
-    padding: 0;
-  }
-
-  input[type=email],
-  input[type=button] {
-    padding: 10px 0;
-  }
-
-  .features h2 span{
-    display: inline;
-  }
-
-  .features .container {
-    padding: 95px 0 45px 0;
-  }
-
-  .features .content-wrapper {
-    padding-top: 35px;
-  }
-
-  .features-icon {
-    margin-bottom: 30px;
-  }
-
-  .features-description {
-    margin: 0 auto;
-    padding: 0 40px;
-  }
-
-  .social-proof .content-wrapper {
-    align-items: flex-start;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  .social-proof article h3 {
-    padding-top: 0;
-  }
-
-  .social-proof .container,
-  .mission .container,
-  .contact-info .container,
-  .faq .container {
-    padding: 100px 0;
-  }
-
-  .q-and-a {
-    padding-top: 40px;
-  }
-
-  .q-and-a p {
-    padding-top: 20px;
-  }
-
-  footer .content-wrapper {
-    align-items: flex-start;
-    justify-content: space-around;
-    padding-top: 100px;
-    width: 78%;
-  }
-
-  .address h3,
-  .social-media h3 {
-  	padding-bottom: 35px;
-  }
-
 }
 
 @media only screen and (min-width: 1200px) {
   /*Desktop styles here*/
 
-
-  h1 {
-    font-size: 3.75em;
-    width: 70%;
-  }
-
-  h2 {
-    font-size: 2.25em;
-  }
-
-  h3 {
-    font-size: 1.875em;
-  }
-
-  p {
-    font-size: 1.125em;
-  }
+  /*----- GRID -----*/
 
   .container header {
     justify-content: flex-start;
@@ -814,6 +801,29 @@ footer .content-wrapper {
     width: 100%;
   }
 
+  footer .content-wrapper {
+    justify-content: space-between;
+  }
+
+  /*----- FONT STYLES -----*/
+
+  h1 {
+    font-size: 3.75em;
+    width: 70%;
+  }
+
+  h2 {
+    font-size: 2.25em;
+  }
+
+  h3 {
+    font-size: 1.875em;
+  }
+
+  p {
+    font-size: 1.125em;
+  }
+
   .mission header h1,
   .contact-info header h1 {
     font-size: 3em;
@@ -821,10 +831,6 @@ footer .content-wrapper {
 
   .q-and-a h3 {
     font-size: 1.125em;
-  }
-
-  footer .content-wrapper {
-    justify-content: space-between;
   }
 
 }
