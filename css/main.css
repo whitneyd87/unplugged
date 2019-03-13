@@ -200,7 +200,6 @@ footer {
   justify-content: center;
 }
 
-header .container,
 .features .content-wrapper {
   justify-content: center;
 }
@@ -210,14 +209,13 @@ header .container,
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  position: relative;
 }
 
 ul {
   display: flex;
   justify-content: space-around;
-  padding: 20px 0 0 0;
-  margin: 10px 0 20px 0;
+  padding: 0;
+  margin: 0;
   width: 100%;
 }
 
@@ -225,19 +223,27 @@ ul {
 /*----- HEADER -----*/
 
 
-header .container {
-  padding-top: 15px;
+header {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  padding: 15px 0;
 }
 
-header .content-wrapper {
-  width: 70%;
+header figure {
+	width: 70%;
 }
 
-hr {
-	border-top: 0.5px solid #3a3a3a;
-	margin: 0;
-	position: absolute;
-	width: 100vw;
+header .header-divider {
+	background-color: #3a3a3a;
+	height: 1px;
+	margin: 10px 0 15px 0;
+	width: 100%;
+}
+
+header nav {
+	width: 70%;
 }
 
 
@@ -584,19 +590,22 @@ footer .content-wrapper {
   }
 
   header .content-wrapper {
-    width: 100%;
+  	flex-flow: row nowrap;
+    width: 83%;
   }
 
   header figure {
-    width: 30%;
+    width: 40%;
   }
 
-  hr {
+  header .header-divider {
+  	height: 0;
   	width: 0;
   }
 
   nav ul {
-    justify-content: flex-end;
+  	align-items: center;
+  	justify-content: flex-end;
   }
 
   nav ul li {
